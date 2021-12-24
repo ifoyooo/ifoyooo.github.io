@@ -123,7 +123,7 @@
 
 
                 <time class="article-time--reading">
-                    3 minute read
+                    4 minute read
                 </time>
             </div>
         
@@ -207,6 +207,17 @@
 	<figcaption>CIL</figcaption>
 	
 </figure></a></p>
+<p>The code repository for &ldquo;PyCIL: A Python Toolbox for Class-Incremental Learning&rdquo; <a class="link" href="https://arxiv.org/abs/2112.12533"  target="_blank" rel="noopener"
+    >[paper]</a> in PyTorch. If you use any content of this repo for your work, please cite the following bib entry:</p>
+<pre><code>@misc{zhou2021pycil,
+  title={PyCIL: A Python Toolbox for Class-Incremental Learning}, 
+  author={Da-Wei Zhou and Fu-Yun Wang and Han-Jia Ye and De-Chuan Zhan},
+  year={2021},
+  eprint={2112.12533},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG}
+}
+</code></pre>
 <h2 id="introduction">Introduction</h2>
 <p>Traditional machine learning systems are deployed under the closed-world setting, which requires the entire training data before the offline training process. However, real-world applications often face the incoming new classes, and a model should incorporate them continually. The learning paradigm is called Class-Incremental Learning (CIL). We propose a Python toolbox that implements several key algorithms for class-incremental learning to ease the burden of researchers in the machine learning community. The toolbox contains implementations of a number of founding works of CIL such as EWC and iCaRL, but also provides current state-of-the-art algorithms that can be used for conducting novel fundamental research.
 This <a class="link" href="https://github.com/G-U-N/PyCIL"  target="_blank" rel="noopener"
@@ -237,10 +248,50 @@ This <a class="link" href="https://github.com/G-U-N/PyCIL"  target="_blank" rel=
 <h2 id="reproduced-results">Reproduced Results</h2>
 <h4 id="cifar100">CIFAR100</h4>
 <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 136; 
+			flex-basis: 327px"
+	>
+	<a href="/posts/2021-12-24/cifar10s.png" data-size="1818x1334">
+		<img src="/posts/2021-12-24/cifar10s.png"
+			width="1818"
+			height="1334"
+			srcset="/posts/2021-12-24/cifar10s_hu291678a836c54d8d4e9f0d180369ad76_310944_480x0_resize_box_3.png 480w, /posts/2021-12-24/cifar10s_hu291678a836c54d8d4e9f0d180369ad76_310944_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="Results on CIFAR100">
+	</a>
+	
+	<figcaption>Results on CIFAR100</figcaption>
+	
+</figure></p>
 <h4 id="imagenet100">Imagenet100</h4>
 <!-- raw HTML omitted -->
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 136; 
+			flex-basis: 326px"
+	>
+	<a href="/posts/2021-12-24/imagenet20st5.png" data-size="1818x1335">
+		<img src="/posts/2021-12-24/imagenet20st5.png"
+			width="1818"
+			height="1335"
+			srcset="/posts/2021-12-24/imagenet20st5_hub922384d1c4924907606f425e8c4eae4_296555_480x0_resize_box_3.png 480w, /posts/2021-12-24/imagenet20st5_hub922384d1c4924907606f425e8c4eae4_296555_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="Results on Imagenet100">
+	</a>
+	
+	<figcaption>Results on Imagenet100</figcaption>
+	
+</figure></p>
 <blockquote>
-<p>More experimental details and results are shown in our <a class="link" href="" >paper</a>.</p>
+<p>More experimental details and results are shown in our <a class="link" href="https://arxiv.org/abs/2112.12533"  target="_blank" rel="noopener"
+    >[paper]</a>.</p>
 </blockquote>
 <h2 id="how-to-use">How To Use</h2>
 <h3 id="clone">Clone</h3>

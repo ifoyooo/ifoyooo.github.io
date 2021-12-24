@@ -86,6 +86,17 @@
 	&lt;figcaption&gt;CIL&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The code repository for &amp;ldquo;PyCIL: A Python Toolbox for Class-Incremental Learning&amp;rdquo; &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2112.12533&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;[paper]&lt;/a&gt; in PyTorch. If you use any content of this repo for your work, please cite the following bib entry:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@misc{zhou2021pycil,
+  title={PyCIL: A Python Toolbox for Class-Incremental Learning}, 
+  author={Da-Wei Zhou and Fu-Yun Wang and Han-Jia Ye and De-Chuan Zhan},
+  year={2021},
+  eprint={2112.12533},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG}
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Traditional machine learning systems are deployed under the closed-world setting, which requires the entire training data before the offline training process. However, real-world applications often face the incoming new classes, and a model should incorporate them continually. The learning paradigm is called Class-Incremental Learning (CIL). We propose a Python toolbox that implements several key algorithms for class-incremental learning to ease the burden of researchers in the machine learning community. The toolbox contains implementations of a number of founding works of CIL such as EWC and iCaRL, but also provides current state-of-the-art algorithms that can be used for conducting novel fundamental research.
 This &lt;a class=&#34;link&#34; href=&#34;https://github.com/G-U-N/PyCIL&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -116,10 +127,50 @@ This &lt;a class=&#34;link&#34; href=&#34;https://github.com/G-U-N/PyCIL&#34;  t
 &lt;h2 id=&#34;reproduced-results&#34;&gt;Reproduced Results&lt;/h2&gt;
 &lt;h4 id=&#34;cifar100&#34;&gt;CIFAR100&lt;/h4&gt;
 &lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 136; 
+			flex-basis: 327px&#34;
+	&gt;
+	&lt;a href=&#34;https://ifoyooo.github.io/posts/2021-12-24/cifar10s.png&#34; data-size=&#34;1818x1334&#34;&gt;
+		&lt;img src=&#34;https://ifoyooo.github.io/posts/2021-12-24/cifar10s.png&#34;
+			width=&#34;1818&#34;
+			height=&#34;1334&#34;
+			srcset=&#34;https://ifoyooo.github.io/posts/2021-12-24/cifar10s_hu291678a836c54d8d4e9f0d180369ad76_310944_480x0_resize_box_3.png 480w, https://ifoyooo.github.io/posts/2021-12-24/cifar10s_hu291678a836c54d8d4e9f0d180369ad76_310944_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Results on CIFAR100&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Results on CIFAR100&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
 &lt;h4 id=&#34;imagenet100&#34;&gt;Imagenet100&lt;/h4&gt;
 &lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 136; 
+			flex-basis: 326px&#34;
+	&gt;
+	&lt;a href=&#34;https://ifoyooo.github.io/posts/2021-12-24/imagenet20st5.png&#34; data-size=&#34;1818x1335&#34;&gt;
+		&lt;img src=&#34;https://ifoyooo.github.io/posts/2021-12-24/imagenet20st5.png&#34;
+			width=&#34;1818&#34;
+			height=&#34;1335&#34;
+			srcset=&#34;https://ifoyooo.github.io/posts/2021-12-24/imagenet20st5_hub922384d1c4924907606f425e8c4eae4_296555_480x0_resize_box_3.png 480w, https://ifoyooo.github.io/posts/2021-12-24/imagenet20st5_hub922384d1c4924907606f425e8c4eae4_296555_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Results on Imagenet100&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Results on Imagenet100&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;More experimental details and results are shown in our &lt;a class=&#34;link&#34; href=&#34;&#34; &gt;paper&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More experimental details and results are shown in our &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2112.12533&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;[paper]&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;how-to-use&#34;&gt;How To Use&lt;/h2&gt;
 &lt;h3 id=&#34;clone&#34;&gt;Clone&lt;/h3&gt;
