@@ -8,23 +8,23 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ifoyooo.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About Me</title>
+      <link>https://ifoyooo.github.io/page/about/</link>
+      <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ifoyooo.github.io/page/about/</guid>
+      <description>Hi, I am Fu-Yun Wang . I was born in 2001 and was admitted to the School of artificial Intelligence of Nanjing University in 2019 through the Chinese college entrance examination.
+From June 2021 to the present, I have been engaged in the field of machine learning under the supervision of teacher Ye from Lamda, led by professor Zhi-Hua Zhou.
+Up to now, my research interests include Continual Learning, Bayesian Methods, Machine Learning Theory and Reinforcement Learning.</description>
+    </item>
+    
+    <item>
       <title>Archives</title>
       <link>https://ifoyooo.github.io/page/archives/</link>
       <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ifoyooo.github.io/page/archives/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://ifoyooo.github.io/page/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ifoyooo.github.io/page/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
-Hugo makes use of a variety of open source projects including:
- https://github.</description>
     </item>
     
     <item>
