@@ -6,6 +6,197 @@
         <description>Recent content on Fu-Yun Wang</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 24 Dec 2021 20:26:42 +0800</lastBuildDate><atom:link href="https://ifoyooo.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 24 Dec 2021 20:26:42 +0800</lastBuildDate><atom:link href="https://ifoyooo.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>PyCIL</title>
+        <link>https://ifoyooo.github.io/posts/my-first-post/</link>
+        <pubDate>Fri, 24 Dec 2021 20:26:42 +0800</pubDate>
+        
+        <guid>https://ifoyooo.github.io/posts/my-first-post/</guid>
+        <description>&lt;h1 id=&#34;pycil-a-python-toolbox-for-class-incremental-learning&#34;&gt;PyCIL: A Python Toolbox for Class-Incremental Learning&lt;/h1&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/yaoyao-liu/class-incremental-learning/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://img.shields.io/badge/license-MIT-green?style=flat-square&#34; &gt;
+		&lt;img src=&#34;https://img.shields.io/badge/license-MIT-green?style=flat-square&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;LICENSE&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;LICENSE&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/a&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://img.shields.io/badge/python-3.8-blue.svg?style=flat-square&amp;amp;logo=python&amp;amp;color=3776AB&amp;amp;logoColor=3776AB&#34; &gt;
+		&lt;img src=&#34;https://img.shields.io/badge/python-3.8-blue.svg?style=flat-square&amp;amp;logo=python&amp;amp;color=3776AB&amp;amp;logoColor=3776AB&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;Python&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Python&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://img.shields.io/badge/pytorch-1.8-%237732a8?style=flat-square&amp;amp;logo=PyTorch&amp;amp;color=EE4C2C&#34; &gt;
+		&lt;img src=&#34;https://img.shields.io/badge/pytorch-1.8-%237732a8?style=flat-square&amp;amp;logo=PyTorch&amp;amp;color=EE4C2C&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;PyTorch&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;PyTorch&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;&#34; &gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://img.shields.io/badge/Reproduced-11-success&#34; &gt;
+		&lt;img src=&#34;https://img.shields.io/badge/Reproduced-11-success&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;method&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;method&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://paperswithcode.com/task/incremental-learning&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://img.shields.io/badge/ClassIncrementalLearning-SOTA-success??style=for-the-badge&amp;amp;logo=appveyor&#34; &gt;
+		&lt;img src=&#34;https://img.shields.io/badge/ClassIncrementalLearning-SOTA-success??style=for-the-badge&amp;amp;logo=appveyor&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;CIL&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;CIL&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Traditional machine learning systems are deployed under the closed-world setting, which requires the entire training data before the offline training process. However, real-world applications often face the incoming new classes, and a model should incorporate them continually. The learning paradigm is called Class-Incremental Learning (CIL). We propose a Python toolbox that implements several key algorithms for class-incremental learning to ease the burden of researchers in the machine learning community. The toolbox contains implementations of a number of founding works of CIL such as EWC and iCaRL, but also provides current state-of-the-art algorithms that can be used for conducting novel fundamental research.
+This toolbox, named PyCIL for Python Class-Incremental Learning, is open source with an MIT license.&lt;/p&gt;
+&lt;h2 id=&#34;methods-reproduced&#34;&gt;Methods Reproduced&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;FineTune&lt;/code&gt;: Baseline method which simply updates parameters on new task, suffering from Catastrophic Forgetting. By default, weights corresponding to the outputs of previous classes are not updated.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;EWC&lt;/code&gt;: Gradient Episodic Memory for Continual Learning. [&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1612.00796&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;LwF&lt;/code&gt;:  Learning without Forgetting. [&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1606.09282&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;Replay&lt;/code&gt;: Baseline method with exemplars.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;GEM&lt;/code&gt;: Gradient Episodic Memory for Continual Learning. [&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1706.08840&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;iCaRL&lt;/code&gt;: Incremental Classifier and Representation Learning. [&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1611.07725&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;BiC&lt;/code&gt;: Large Scale Incremental Learning. [&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1905.13260&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;WA&lt;/code&gt;: Maintaining Discrimination and Fairness in Class Incremental Learning. [&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1911.07053&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;PODNet&lt;/code&gt;: PODNet: Pooled Outputs Distillation for Small-Tasks Incremental Learning. [&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2004.13513&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;DER&lt;/code&gt;: DER: Dynamically Expandable Representation for Class Incremental Learning. [&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2103.16788&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;code&gt;Coil&lt;/code&gt;: Co-Transport for Class-Incremental Learning. [&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2107.12654&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reproduced-results&#34;&gt;Reproduced Results&lt;/h2&gt;
+&lt;h4 id=&#34;cifar100&#34;&gt;CIFAR100&lt;/h4&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;imagenet100&#34;&gt;Imagenet100&lt;/h4&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;More experimental details and results are shown in our &lt;a class=&#34;link&#34; href=&#34;&#34; &gt;paper&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;how-to-use&#34;&gt;How To Use&lt;/h2&gt;
+&lt;h3 id=&#34;clone&#34;&gt;Clone&lt;/h3&gt;
+&lt;p&gt;Clone this github repository:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/G-U-N/PyCIL.git
+cd PyCIL
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pytorch/pytorch&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;torch 1.81&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pytorch/vision&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;torchvision 0.6.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/tqdm/tqdm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tqdm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/numpy/numpy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;numpy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/scipy/scipy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;scipy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/quadprog/quadprog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;quadprog&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;run-experiment&#34;&gt;Run experiment&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Edit the &lt;code&gt;[MODEL NAME].json&lt;/code&gt; file for global settings.&lt;/li&gt;
+&lt;li&gt;Edit the hyperparameters in the corresponding &lt;code&gt;[MODEL NAME].py&lt;/code&gt; file (e.g., &lt;code&gt;models/icarl.py&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Run:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;python main.py --config&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;./exps/&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;MODEL NAME&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where [MODEL NAME] should be chosen from: &lt;code&gt;finetune&lt;/code&gt;, &lt;code&gt;ewc&lt;/code&gt;, &lt;code&gt;lwf&lt;/code&gt;, &lt;code&gt;replay&lt;/code&gt;, &lt;code&gt;gem&lt;/code&gt;,  &lt;code&gt;icarl&lt;/code&gt;, &lt;code&gt;bic&lt;/code&gt;, &lt;code&gt;wa&lt;/code&gt;, &lt;code&gt;podnet&lt;/code&gt;, &lt;code&gt;der&lt;/code&gt;.&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;code&gt;hyper-parameters&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;When using PyCIL, you can edit the global parameters and algorithm-specific hyper-parameter in the corresponding json file.&lt;/p&gt;
+&lt;p&gt;These parameters include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;memory-size&lt;/strong&gt;: The total exemplar number in the incremental learning process. Assuming there are $K$ classes at current stage, the model will preserve $\left[\frac{memory-size}{K}\right]$ exemplar per class.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;init-cls&lt;/strong&gt;: The number of classes in the first incremental stage. Since there are different settings in CIL with a different number of classes in the first stage, our framework enables different choices to define the initial stage.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;increment&lt;/strong&gt;: The number of classes in each incremental stage $i$, $i$ &amp;gt; 1. By default, the number of classes per incremental stage is equivalent per stage.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;convnet-type&lt;/strong&gt;: The backbone network for the incremental model. According to the benchmark setting, &lt;code&gt;ResNet32&lt;/code&gt; is utilized for &lt;code&gt;CIFAR100&lt;/code&gt;, and &lt;code&gt;ResNet18&lt;/code&gt; is utilized for &lt;code&gt;ImageNet&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;seed&lt;/strong&gt;: The random seed adopted for shuffling the class order. According to the benchmark setting, it is set to 1993 by default.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other parameters in terms of model optimization, e.g., batch size, optimization epoch, learning rate, learning rate decay, weight decay, milestone, temperature, can be modified in the corresponding Python file.&lt;/p&gt;
+&lt;h3 id=&#34;datasets&#34;&gt;Datasets&lt;/h3&gt;
+&lt;p&gt;We have implemented the pre-processing of &lt;code&gt;CIFAR100&lt;/code&gt;, &lt;code&gt;imagenet100&lt;/code&gt; and &lt;code&gt;imagenet1000&lt;/code&gt;. When training on &lt;code&gt;CIFAR100&lt;/code&gt;, this framework will automatically download it.  When training on &lt;code&gt;imagenet100/1000&lt;/code&gt;, you should specify the folder of your dataset in &lt;code&gt;utils/data.py&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;download_data&lt;/span&gt;(self):
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You should specify the folder of your dataset&amp;#34;&lt;/span&gt;
+        train_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[DATA-PATH]/train/&amp;#39;&lt;/span&gt;
+        test_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[DATA-PATH]/val/&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Please check the MIT  &lt;a class=&#34;link&#34; href=&#34;./LICENSE&#34; &gt;license&lt;/a&gt; that is listed in this repository.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;We thank the following repos providing helpful components/functions in our work.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/zhchuu/continual-learning-reproduce&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Continual-Learning-Reproduce&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hursung1/GradientEpisodicMemory&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GEM&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/zhoudw-zdw/CVPR21-Proser&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Proser&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/zhoudw-zdw/MM21-Coil&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Coil&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mmasana/FACIL&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FACIL&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;p&gt;If there are any questions, please feel free to  propose new features by opening an issue  or contact with the author: &lt;strong&gt;Da-Wei Zhou&lt;/strong&gt;(&lt;a class=&#34;link&#34; href=&#34;mailto:zhoudw@lamda.nju.edu.cn&#34; &gt;zhoudw@lamda.nju.edu.cn&lt;/a&gt;) and &lt;strong&gt;Fu-Yun Wang&lt;/strong&gt;(&lt;a class=&#34;link&#34; href=&#34;mailto:wangfuyun@smail.nju.edu.cn&#34; &gt;wangfuyun@smail.nju.edu.cn&lt;/a&gt;). Enjoy the code.&lt;/p&gt;
+</description>
+        </item>
+        
     </channel>
 </rss>
