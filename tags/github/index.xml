@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Dec 2021 20:26:42 +0800</lastBuildDate><atom:link href="https://ifoyooo.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PyCIL</title>
-      <link>https://ifoyooo.github.io/posts/my-first-post/</link>
+      <title>PyCIL: A Python Toolbox for Class-Incremental Learning</title>
+      <link>https://ifoyooo.github.io/posts/2021-12-24/</link>
       <pubDate>Fri, 24 Dec 2021 20:26:42 +0800</pubDate>
       
-      <guid>https://ifoyooo.github.io/posts/my-first-post/</guid>
+      <guid>https://ifoyooo.github.io/posts/2021-12-24/</guid>
       <description>PyCIL: A Python Toolbox for Class-Incremental Learning   LICENSEPython PyTorch method CIL
 Introduction Traditional machine learning systems are deployed under the closed-world setting, which requires the entire training data before the offline training process. However, real-world applications often face the incoming new classes, and a model should incorporate them continually. The learning paradigm is called Class-Incremental Learning (CIL). We propose a Python toolbox that implements several key algorithms for class-incremental learning to ease the burden of researchers in the machine learning community.</description>
     </item>

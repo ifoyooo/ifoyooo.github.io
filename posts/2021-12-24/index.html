@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='PyCIL: A Python Toolbox for Class-Incremental Learning   LICENSEPython PyTorch method CIL
+Introduction Traditional machine learning systems are deployed under the closed-world setting, which requires the entire training data before the offline training process. However, real-world applications often face the incoming new classes, and a model should incorporate them continually. The learning paradigm is called Class-Incremental Learning (CIL). We propose a Python toolbox that implements several key algorithms for class-incremental learning to ease the burden of researchers in the machine learning community.'><title>PyCIL: A Python Toolbox for Class-Incremental Learning</title>
+
+<link rel='canonical' href='https://ifoyooo.github.io/posts/2021-12-24/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='PyCIL: A Python Toolbox for Class-Incremental Learning'>
+<meta property='og:description' content='PyCIL: A Python Toolbox for Class-Incremental Learning   LICENSEPython PyTorch method CIL
+Introduction Traditional machine learning systems are deployed under the closed-world setting, which requires the entire training data before the offline training process. However, real-world applications often face the incoming new classes, and a model should incorporate them continually. The learning paradigm is called Class-Incremental Learning (CIL). We propose a Python toolbox that implements several key algorithms for class-incremental learning to ease the burden of researchers in the machine learning community.'>
+<meta property='og:url' content='https://ifoyooo.github.io/posts/2021-12-24/'>
+<meta property='og:site_name' content='Fu-Yun Wang'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Class-Incremental Learning' /><meta property='article:tag' content='GitHub' /><meta property='article:published_time' content='2021-12-24T20:26:42&#43;08:00'/><meta property='article:modified_time' content='2021-12-24T20:26:42&#43;08:00'/>
+<meta name="twitter:title" content="PyCIL: A Python Toolbox for Class-Incremental Learning">
+<meta name="twitter:description" content="PyCIL: A Python Toolbox for Class-Incremental Learning   LICENSEPython PyTorch method CIL
+Introduction Traditional machine learning systems are deployed under the closed-world setting, which requires the entire training data before the offline training process. However, real-world applications often face the incoming new classes, and a model should incorporate them continually. The learning paradigm is called Class-Incremental Learning (CIL). We propose a Python toolbox that implements several key algorithms for class-incremental learning to ease the burden of researchers in the machine learning community.">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A7%91%E7%A0%94%E5%B7%A5%E5%85%B7%E5%8C%85/" >
+                科研工具包
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/2021-12-24/">PyCIL: A Python Toolbox for Class-Incremental Learning</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 24, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="pycil-a-python-toolbox-for-class-incremental-learning">PyCIL: A Python Toolbox for Class-Incremental Learning</h1>
+<hr>
+<!-- raw HTML omitted -->
+<hr>
+<p><a class="link" href="https://github.com/yaoyao-liu/class-incremental-learning/blob/master/LICENSE"  target="_blank" rel="noopener"
+    ><figure 
+	>
+	<a href="https://img.shields.io/badge/license-MIT-green?style=flat-square" >
+		<img src="https://img.shields.io/badge/license-MIT-green?style=flat-square"
+			
+			
+			
+			loading="lazy"
+			alt="LICENSE">
+	</a>
+	
+	<figcaption>LICENSE</figcaption>
+	
+</figure></a><a class="link" href="https://www.python.org/"  target="_blank" rel="noopener"
+    ><figure 
+	>
+	<a href="https://img.shields.io/badge/python-3.8-blue.svg?style=flat-square&amp;logo=python&amp;color=3776AB&amp;logoColor=3776AB" >
+		<img src="https://img.shields.io/badge/python-3.8-blue.svg?style=flat-square&amp;logo=python&amp;color=3776AB&amp;logoColor=3776AB"
+			
+			
+			
+			loading="lazy"
+			alt="Python">
+	</a>
+	
+	<figcaption>Python</figcaption>
+	
+</figure></a> <a class="link" href="https://pytorch.org/"  target="_blank" rel="noopener"
+    ><figure 
+	>
+	<a href="https://img.shields.io/badge/pytorch-1.8-%237732a8?style=flat-square&amp;logo=PyTorch&amp;color=EE4C2C" >
+		<img src="https://img.shields.io/badge/pytorch-1.8-%237732a8?style=flat-square&amp;logo=PyTorch&amp;color=EE4C2C"
+			
+			
+			
+			loading="lazy"
+			alt="PyTorch">
+	</a>
+	
+	<figcaption>PyTorch</figcaption>
+	
+</figure></a> <a class="link" href="" ><figure 
+	>
+	<a href="https://img.shields.io/badge/Reproduced-11-success" >
+		<img src="https://img.shields.io/badge/Reproduced-11-success"
+			
+			
+			
+			loading="lazy"
+			alt="method">
+	</a>
+	
+	<figcaption>method</figcaption>
+	
+</figure></a> <a class="link" href="https://paperswithcode.com/task/incremental-learning"  target="_blank" rel="noopener"
+    ><figure 
+	>
+	<a href="https://img.shields.io/badge/ClassIncrementalLearning-SOTA-success??style=for-the-badge&amp;logo=appveyor" >
+		<img src="https://img.shields.io/badge/ClassIncrementalLearning-SOTA-success??style=for-the-badge&amp;logo=appveyor"
+			
+			
+			
+			loading="lazy"
+			alt="CIL">
+	</a>
+	
+	<figcaption>CIL</figcaption>
+	
+</figure></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>Traditional machine learning systems are deployed under the closed-world setting, which requires the entire training data before the offline training process. However, real-world applications often face the incoming new classes, and a model should incorporate them continually. The learning paradigm is called Class-Incremental Learning (CIL). We propose a Python toolbox that implements several key algorithms for class-incremental learning to ease the burden of researchers in the machine learning community. The toolbox contains implementations of a number of founding works of CIL such as EWC and iCaRL, but also provides current state-of-the-art algorithms that can be used for conducting novel fundamental research.
+This toolbox, named PyCIL for Python Class-Incremental Learning, is open source with an MIT license.</p>
+<h2 id="methods-reproduced">Methods Reproduced</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <code>FineTune</code>: Baseline method which simply updates parameters on new task, suffering from Catastrophic Forgetting. By default, weights corresponding to the outputs of previous classes are not updated.</li>
+<li><input checked="" disabled="" type="checkbox"> <code>EWC</code>: Gradient Episodic Memory for Continual Learning. [<a class="link" href="https://arxiv.org/abs/1612.00796"  target="_blank" rel="noopener"
+    >paper</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> <code>LwF</code>:  Learning without Forgetting. [<a class="link" href="https://arxiv.org/abs/1606.09282"  target="_blank" rel="noopener"
+    >paper</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> <code>Replay</code>: Baseline method with exemplars.</li>
+<li><input checked="" disabled="" type="checkbox"> <code>GEM</code>: Gradient Episodic Memory for Continual Learning. [<a class="link" href="https://arxiv.org/abs/1706.08840"  target="_blank" rel="noopener"
+    >paper</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> <code>iCaRL</code>: Incremental Classifier and Representation Learning. [<a class="link" href="https://arxiv.org/abs/1611.07725"  target="_blank" rel="noopener"
+    >paper</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> <code>BiC</code>: Large Scale Incremental Learning. [<a class="link" href="https://arxiv.org/abs/1905.13260"  target="_blank" rel="noopener"
+    >paper</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> <code>WA</code>: Maintaining Discrimination and Fairness in Class Incremental Learning. [<a class="link" href="https://arxiv.org/abs/1911.07053"  target="_blank" rel="noopener"
+    >paper</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> <code>PODNet</code>: PODNet: Pooled Outputs Distillation for Small-Tasks Incremental Learning. [<a class="link" href="https://arxiv.org/abs/2004.13513"  target="_blank" rel="noopener"
+    >paper</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> <code>DER</code>: DER: Dynamically Expandable Representation for Class Incremental Learning. [<a class="link" href="https://arxiv.org/abs/2103.16788"  target="_blank" rel="noopener"
+    >paper</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> <code>Coil</code>: Co-Transport for Class-Incremental Learning. [<a class="link" href="https://arxiv.org/abs/2107.12654"  target="_blank" rel="noopener"
+    >paper</a>]</li>
+</ul>
+<h2 id="reproduced-results">Reproduced Results</h2>
+<h4 id="cifar100">CIFAR100</h4>
+<!-- raw HTML omitted -->
+<h4 id="imagenet100">Imagenet100</h4>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>More experimental details and results are shown in our <a class="link" href="" >paper</a>.</p>
+</blockquote>
+<h2 id="how-to-use">How To Use</h2>
+<h3 id="clone">Clone</h3>
+<p>Clone this github repository:</p>
+<pre tabindex="0"><code>git clone https://github.com/G-U-N/PyCIL.git
+cd PyCIL
+</code></pre><h3 id="dependencies">Dependencies</h3>
+<ol>
+<li><a class="link" href="https://github.com/pytorch/pytorch"  target="_blank" rel="noopener"
+    >torch 1.81</a></li>
+<li><a class="link" href="https://github.com/pytorch/vision"  target="_blank" rel="noopener"
+    >torchvision 0.6.0</a></li>
+<li><a class="link" href="https://github.com/tqdm/tqdm"  target="_blank" rel="noopener"
+    >tqdm</a></li>
+<li><a class="link" href="https://github.com/numpy/numpy"  target="_blank" rel="noopener"
+    >numpy</a></li>
+<li><a class="link" href="https://github.com/scipy/scipy"  target="_blank" rel="noopener"
+    >scipy</a></li>
+<li><a class="link" href="https://github.com/quadprog/quadprog"  target="_blank" rel="noopener"
+    >quadprog</a></li>
+</ol>
+<h3 id="run-experiment">Run experiment</h3>
+<ol>
+<li>Edit the <code>[MODEL NAME].json</code> file for global settings.</li>
+<li>Edit the hyperparameters in the corresponding <code>[MODEL NAME].py</code> file (e.g., <code>models/icarl.py</code>).</li>
+<li>Run:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python main.py --config<span style="color:#f92672">=</span>./exps/<span style="color:#f92672">[</span>MODEL NAME<span style="color:#f92672">]</span>.json
+</code></pre></div><p>where [MODEL NAME] should be chosen from: <code>finetune</code>, <code>ewc</code>, <code>lwf</code>, <code>replay</code>, <code>gem</code>,  <code>icarl</code>, <code>bic</code>, <code>wa</code>, <code>podnet</code>, <code>der</code>.</p>
+<ol start="4">
+<li><code>hyper-parameters</code></li>
+</ol>
+<p>When using PyCIL, you can edit the global parameters and algorithm-specific hyper-parameter in the corresponding json file.</p>
+<p>These parameters include:</p>
+<ul>
+<li><strong>memory-size</strong>: The total exemplar number in the incremental learning process. Assuming there are $K$ classes at current stage, the model will preserve $\left[\frac{memory-size}{K}\right]$ exemplar per class.</li>
+<li><strong>init-cls</strong>: The number of classes in the first incremental stage. Since there are different settings in CIL with a different number of classes in the first stage, our framework enables different choices to define the initial stage.</li>
+<li><strong>increment</strong>: The number of classes in each incremental stage $i$, $i$ &gt; 1. By default, the number of classes per incremental stage is equivalent per stage.</li>
+<li><strong>convnet-type</strong>: The backbone network for the incremental model. According to the benchmark setting, <code>ResNet32</code> is utilized for <code>CIFAR100</code>, and <code>ResNet18</code> is utilized for <code>ImageNet</code>.</li>
+<li><strong>seed</strong>: The random seed adopted for shuffling the class order. According to the benchmark setting, it is set to 1993 by default.</li>
+</ul>
+<p>Other parameters in terms of model optimization, e.g., batch size, optimization epoch, learning rate, learning rate decay, weight decay, milestone, temperature, can be modified in the corresponding Python file.</p>
+<h3 id="datasets">Datasets</h3>
+<p>We have implemented the pre-processing of <code>CIFAR100</code>, <code>imagenet100</code> and <code>imagenet1000</code>. When training on <code>CIFAR100</code>, this framework will automatically download it.  When training on <code>imagenet100/1000</code>, you should specify the folder of your dataset in <code>utils/data.py</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">download_data</span>(self):
+        <span style="color:#66d9ef">assert</span> <span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#34;You should specify the folder of your dataset&#34;</span>
+        train_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;[DATA-PATH]/train/&#39;</span>
+        test_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;[DATA-PATH]/val/&#39;</span>
+</code></pre></div><h2 id="license">License</h2>
+<p>Please check the MIT  <a class="link" href="./LICENSE" >license</a> that is listed in this repository.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We thank the following repos providing helpful components/functions in our work.</p>
+<ul>
+<li>
+<p><a class="link" href="https://github.com/zhchuu/continual-learning-reproduce"  target="_blank" rel="noopener"
+    >Continual-Learning-Reproduce</a></p>
+</li>
+<li>
+<p><a class="link" href="https://github.com/hursung1/GradientEpisodicMemory"  target="_blank" rel="noopener"
+    >GEM</a></p>
+</li>
+<li>
+<p><a class="link" href="https://github.com/zhoudw-zdw/CVPR21-Proser"  target="_blank" rel="noopener"
+    >Proser</a></p>
+</li>
+<li>
+<p><a class="link" href="https://github.com/zhoudw-zdw/MM21-Coil"  target="_blank" rel="noopener"
+    >Coil</a></p>
+</li>
+<li>
+<p><a class="link" href="https://github.com/mmasana/FACIL"  target="_blank" rel="noopener"
+    >FACIL</a></p>
+</li>
+</ul>
+<h2 id="citation">Citation</h2>
+<p>If there are any questions, please feel free to  propose new features by opening an issue  or contact with the author: <strong>Da-Wei Zhou</strong>(<a class="link" href="mailto:zhoudw@lamda.nju.edu.cn" >zhoudw@lamda.nju.edu.cn</a>) and <strong>Fu-Yun Wang</strong>(<a class="link" href="mailto:wangfuyun@smail.nju.edu.cn" >wangfuyun@smail.nju.edu.cn</a>). Enjoy the code.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/class-incremental-learning/">Class-Incremental Learning</a>
+        
+            <a href="/tags/github/">GitHub</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    <div id="remark42"></div>
+<script>
+    var remark_config = {
+        host: "",
+        site_id: '',
+        components: ['embed'],
+        url: "https:\/\/ifoyooo.github.io\/posts\/2021-12-24\/",
+        max_shown_comments:  15 ,
+        theme: document.documentElement.dataset.scheme,
+        page_title: 'PyCIL: A Python Toolbox for Class-Incremental Learning',
+        locale: 'en',
+        show_email_subscription:  true 
+    };
+
+    (function (c) {
+        for (var i = 0; i < c.length; i++) {
+            var d = document, s = d.createElement('script');
+            s.src = remark_config.host + '/web/' + c[i] + '.js';
+            s.defer = true;
+            (d.head || d.body).appendChild(s);
+        }
+    })(remark_config.components || ['embed']);
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        window.REMARK42.changeTheme(e.detail);
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Fu-Yun Wang
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#methods-reproduced">Methods Reproduced</a></li>
+    <li><a href="#reproduced-results">Reproduced Results</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-use">How To Use</a>
+      <ul>
+        <li><a href="#clone">Clone</a></li>
+        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#run-experiment">Run experiment</a></li>
+        <li><a href="#datasets">Datasets</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#citation">Citation</a></li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
