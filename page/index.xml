@@ -6,7 +6,21 @@
     <description>Recent content in Pages on Fu-Yun Wang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ifoyooo.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ifoyooo.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Books</title>
+      <link>https://ifoyooo.github.io/page/books/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ifoyooo.github.io/page/books/</guid>
+      <description>2021 机器学习 (🍉📕) | Zhi-Hua Zhou. | most chapters (twice).
+Pattern Recognition and Machine Learning | CM Bishop. | most chapters
+Decision Making Under Uncertainty Theory and Application | Mykel J. Kochenderfer. | most chapters
+Understanding Machine Learning from theory to Application | Shai Shalev-Shwartz and Shai Ben-David | part Ⅰ.
+神经网络与深度学习 (Neural Networks and Deep Learning) | Xi-Peng Qiu | part Ⅰ part Ⅱ.
+C++ 程序设计 | Jia-Yun Chen | most chapters</description>
+    </item>
+    
     <item>
       <title>About Me</title>
       <link>https://ifoyooo.github.io/page/about/</link>
@@ -14,7 +28,7 @@
       
       <guid>https://ifoyooo.github.io/page/about/</guid>
       <description>Hi, I am Fu-Yun Wang . I was born in 2001 and was admitted to the School of artificial Intelligence of Nanjing University in 2019 through the Chinese college entrance examination.
-From June 2021 to the present, I have been engaged in the field of machine learning under the supervision of teacher Ye from Lamda, led by professor Zhi-Hua Zhou.
+From June 2021 to the present, I have been engaged in the field of machine learning under the supervision of teacher Ye from LAMDA, led by professor Zhi-Hua Zhou.
 Up to now, my research interests include Continual Learning, Bayesian Methods, Machine Learning Theory and Reinforcement Learning.</description>
     </item>
     
